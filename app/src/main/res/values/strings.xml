@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">EasyPark</string>
+    <string name="Garages">Garages</string>
+    <string name="GarageA">Garage A</string>
+    <string name="GarageB">Garage B</string>
+    <string name="GarageC">Garage C</string>
+    <string name="GarageD">Garage D</string>
+    <string name="Floor1">Floor 1</string>
+    <string name="Floor2">Floor 2</string>
+    <string name="Floor3">Floor 3</string>
+    <string name="Floor4">Floor 4</string>
+    <string name="VacantSpots">Vacant Spots</string>
+    <string name="zeroPercent">0%</string>
+    <string name="zero">0</string>
+
+</resources>
