@@ -17,8 +17,6 @@ import android.widget.TextView;
 public class garage_a extends AppCompatActivity {
     ProgressBar bar1;
     ProgressBar bar2;
-    Button add;
-    Button sub;
     TextView txt;
     TextView txt2;
     final String bar1s = "bar1s";

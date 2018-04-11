@@ -18,7 +18,7 @@ public class garage_b_floor2 extends AppCompatActivity {
     private ProgressBar progbar;
     public static int x;
     final String bar1s = "bar1s";
-    int garageBFloor2Total = 5;
+    int total = 4;
     int temp;
 
 
@@ -34,10 +34,10 @@ public class garage_b_floor2 extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 x = x + 1;
-                if(x >= garageBFloor2Total){
-                    x = garageBFloor2Total;
+                if(x >= total){
+                    x = total;
                 }
-                temp = (x*100)/5;
+                temp = (x*100)/total;
                 progbar.setProgress(temp);
                 progressUpdate(progbar);
             }
@@ -50,7 +50,7 @@ public class garage_b_floor2 extends AppCompatActivity {
                 if(x <= 0){
                     x = 0;
                 }
-                temp = (x*100)/5;
+                temp = (x*100)/total;
                 progbar.setProgress(temp);
                 progressUpdate(progbar);
             }

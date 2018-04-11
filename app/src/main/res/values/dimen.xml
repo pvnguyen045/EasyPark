@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+    <dimen name="side_box_width">55dp</dimen>
+    <dimen name="side_box_height">41dp</dimen>
+    <dimen name="progbar_and_button_width">250dp</dimen>
+    <dimen name="progbar_and_button_height">41dp</dimen>
+
+</resources>

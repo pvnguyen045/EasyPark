@@ -11,6 +11,7 @@ public class garage_a_floor1 extends AppCompatActivity {
 
 //    public static TextView data;
     static String tempString[] = new String[4];
+    TextView data;
 
     Handler handler = new Handler();
     Runnable refresh;
@@ -20,16 +21,16 @@ public class garage_a_floor1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_floor1);
 
-//        data = findViewById(R.id.fetcheddata);
+        data = findViewById(R.id.fetcheddata);
 
         refresh = new Runnable() {
             public void run() {
                 new fetchData().execute();
                 tempString = fetchData.getParkingSpots();
-//                data.setText("ParkingSpotOne: " + tempString[0] + "\n" +
-//                        "ParkingSpotTwo: " + tempString[1] + "\n"+
-//                        "ParkingSpotThree: " + tempString[2] + "\n" +
-//                        "ParkingSpotFour: " + tempString[3] + "\n");
+                data.setText("ParkingSpotOne: " + tempString[0] + "\n" +
+                        "ParkingSpotTwo: " + tempString[1] + "\n"+
+                        "ParkingSpotThree: " + tempString[2] + "\n" +
+                        "ParkingSpotFour: " + tempString[3] + "\n");
                 handler.postDelayed(refresh, 1000);
             }
         };
