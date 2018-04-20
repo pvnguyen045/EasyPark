@@ -78,6 +78,11 @@ public class Homepage extends AppCompatActivity {
         garageCbutton = findViewById(R.id.mButton3);
         garageDbutton = findViewById(R.id.mButton4);
 
+        bar2.setProgress(50);
+        progressUpdate(bar2);
+        txtP2.setText("50%");
+        txtS2.setText("8");
+
         bar3.setProgress(75);
         progressUpdate(bar3);
         txtP3.setText("75%");
@@ -103,14 +108,14 @@ public class Homepage extends AppCompatActivity {
                 txtS1.setText(Integer.toString(garageATotal - dataGarageA));
                 progressUpdate(bar1);
 
-                //Refresh bar2
-                dataGarageB = garage_b.getGarageBdata();
-                temp = numToPercentage(dataGarageB, garageBTotal);
-                bar2.setProgress(temp);
-                stringTemp = Integer.toString(temp) + "%";
-                txtP2.setText(stringTemp);
-                txtS2.setText(Integer.toString(garageBTotal - dataGarageB));
-                progressUpdate(bar2);
+//                //Refresh bar2
+//                dataGarageB = garage_b.getGarageBdata();
+//                temp = numToPercentage(dataGarageB, garageBTotal);
+//                bar2.setProgress(temp);
+//                stringTemp = Integer.toString(temp) + "%";
+//                txtP2.setText(stringTemp);
+//                txtS2.setText(Integer.toString(garageBTotal - dataGarageB));
+//                progressUpdate(bar2);
 
                 handler.postDelayed(refresh, 1000);
             }
@@ -209,9 +214,9 @@ public class Homepage extends AppCompatActivity {
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         temp = sharedPref.getInt(bar1name, 0);
         bar1.setProgress(temp);
-        temp = sharedPref.getInt(bar2name, 0);
-        bar2.setProgress(temp);
+        //temp = sharedPref.getInt(bar2name, 0);
+        //bar2.setProgress(temp);
         progressUpdate(bar1);
-        progressUpdate(bar2);
+        //progressUpdate(bar2);
     }
 }

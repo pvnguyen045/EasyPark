@@ -20,9 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Homepage"
+        <activity
+            android:name=".Homepage"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity android:name=".garage_a" />
         <activity android:name=".garage_b" />
         <activity android:name=".garage_c" />
@@ -30,7 +31,7 @@
         <activity android:name=".garage_b_floor1" />
         <activity android:name=".garage_a_floor2" />
         <activity android:name=".garage_b_floor2" />
-        <activity android:name=".garage_d"></activity>
+        <activity android:name=".garage_d" />
     </application>
 
 </manifest>

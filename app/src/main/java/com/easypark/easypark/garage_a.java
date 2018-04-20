@@ -17,13 +17,22 @@ import android.widget.TextView;
 public class garage_a extends AppCompatActivity {
     ProgressBar bar1;
     ProgressBar bar2;
-    TextView txt;
-    TextView txt2;
+
+    TextView txtP1;
+    TextView txtP2;
+    TextView txtP3;
+    TextView txtP4;
+    TextView txtS1;
+    TextView txtS2;
+    TextView txtS3;
+    TextView txtS4;
+
     final String bar1s = "bar1s";
     Button openFloor1;
     Button openFloor2;
 
     static int dataFloor1;
+    int Floor1Total = 4;
     static int dataFloor2;
     int total = 4;
     int temp;
@@ -36,24 +45,35 @@ public class garage_a extends AppCompatActivity {
         setContentView(R.layout.activity_garage_a);
         bar1 = (ProgressBar)findViewById(R.id.mBar1);
         bar2 = (ProgressBar)findViewById(R.id.mBar2);
-        txt = (TextView)findViewById(R.id.textP1);
-        txt2 = (TextView)findViewById(R.id.textP2);
+        txtP1 = findViewById(R.id.textP1);
+        txtP2 = findViewById(R.id.textP2);
+        txtP3 = findViewById(R.id.textP3);
+        txtP4 = findViewById(R.id.textP4);
+        txtS1 = findViewById(R.id.textS1);
+        txtS2 = findViewById(R.id.textS2);
+        txtS3 = findViewById(R.id.textS3);
+        txtS4 = findViewById(R.id.textS4);
         openFloor1 = findViewById(R.id.mButton1);
-        openFloor2 = (Button)findViewById(R.id.mButton2);
+        openFloor2 = findViewById(R.id.mButton2);
+
+
+
 
         refresh = new Runnable() {
             public void run() {
                 dataFloor1 = garage_a_floor1.getFloor1Data();
                 temp = numToPercentage(dataFloor1,total);
                 bar1.setProgress(temp);
-                txt.setText(Integer.toString(temp) + "%");
+                txtP1.setText(Integer.toString(temp) + "%");
+                txtS1.setText(Integer.toString(total - dataFloor1));
                 progressUpdate(bar1);
 
-                dataFloor2 = garage_a_floor2.getFloor2Data();
-                temp = numToPercentage(dataFloor2,total);
-                bar2.setProgress(temp);
-                txt2.setText(Integer.toString(temp) + "%");
-                progressUpdate(bar2);
+//                dataFloor2 = garage_a_floor2.getFloor2Data();
+//                temp = numToPercentage(dataFloor2,total);
+//                bar2.setProgress(temp);
+//                txtP2.setText(Integer.toString(temp) + "%");
+//                txtS2.setText(Integer.toString(total - dataFloor1));
+//                progressUpdate(bar2);
                 handler.postDelayed(refresh, 1000);
             }
         };
@@ -66,12 +86,12 @@ public class garage_a extends AppCompatActivity {
             }
         });
 
-        openFloor2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openFloor2();
-            }
-        });
+//        openFloor2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openFloor2();
+//            }
+//        });
     }
 
     public void openFloor1(){

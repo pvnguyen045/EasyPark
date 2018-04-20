@@ -20,7 +20,8 @@ public class fetchData extends AsyncTask<Void, Void, Void> {
     String dataParsed = "";
     String singleParsed = "";
     String tempString;
-    static String parkingSpots[]= {"","","",""}; //= {"Occupied","Occupied","Occupied","Vacant"};
+    static String parkingSpots[]= {"","","",""};
+   // static String parkingSpotss[] = {"Vacant","Vacant","Occupied","Occupied"};
 
     @Override
     protected Void doInBackground(Void... voids) {
@@ -70,7 +71,5 @@ public class fetchData extends AsyncTask<Void, Void, Void> {
     public static String[] getParkingSpots(){
         return parkingSpots;
     }
-
-    //public static String haha(){ return parkingSpots[1];}
 }
 
